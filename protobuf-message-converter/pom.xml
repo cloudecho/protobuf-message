@@ -6,7 +6,7 @@
   <parent>
     <groupId>com.github.cloudecho</groupId>
     <artifactId>protobuf-message</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5-dev</version>
   </parent>
 
   <artifactId>protobuf-message-converter</artifactId>
