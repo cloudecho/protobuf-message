@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package test;
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+option java_multiple_files = true;
+option java_package = "com.github.cloudecho.protobuf.test";
+option java_outer_classname = "TestProto";
+option objc_class_prefix = "TEST";
+
+message TestMessage {
+  int32 anInt = 1;
+  google.protobuf.Int32Value integer = 2;
+  int64 aLong = 3;
+  google.protobuf.Int64Value aLongObject = 4;
+  string string = 5;
+  google.protobuf.Timestamp date = 6;
+  NestedMessage nestedDto = 7;
+  repeated string stringList = 8;
+  repeated NestedMessage nestedDtos = 9;
+}
+
+message NestedMessage {
+  int32 nestedInt = 1;
+  google.protobuf.Int32Value nestedInteger = 2;
+  int64 nestedLong = 3;
+  google.protobuf.Int64Value nestedLongObject = 4;
+  string nestedString = 5;
+  repeated string stringList = 6;
+}
